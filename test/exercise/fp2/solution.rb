@@ -6,8 +6,11 @@ module Exercise
 
       # Написать свою функцию my_each
       def my_each
+      
+          puts 'helloo'
       end
-
+      
+      puts 'hellooo'
       # Написать свою функцию my_map
       def my_map
       end
