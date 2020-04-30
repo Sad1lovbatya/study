@@ -11,22 +11,22 @@ class RackTest < Test::Unit::TestCase
       assert browser.last_response.ok?
       assert_equal 'Hello World', browser.last_response.body
   end
-  
-  def test_it_says_hey
+
+  def test_it_pongs
     browser = Rack::Test::Session.new(Rack::MockSession.new(Inatra))
-    browser.get '/hey'
+    browser.get '/ping'
     assert browser.last_response.ok?
-    assert_equal 'hey!', browser.last_response.body
+    assert_equal 'PONG', browser.last_response.body
   end
-  
-  def test_it_says_goodbye
+
+  def test_it_says_bye
     browser = Rack::Test::Session.new(Rack::MockSession.new(Inatra))
-    browser.post '/goodbye'
+    browser.post '/bye'
     assert browser.last_response.ok?
-    assert_equal 'goodbye!', browser.last_response.body
+    assert_equal 'Bye Bye', browser.last_response.body
   end
-  
-  def test_it_eror404
+
+  def test_it_handles_404
     browser = Rack::Test::Session.new(Rack::MockSession.new(Inatra))
     browser.get '/missing_method'
     assert browser.last_response.not_found?

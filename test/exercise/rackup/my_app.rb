@@ -3,12 +3,12 @@ Inatra.routes do
     [200, {}, ['Hello World']]
   end
   
-  get '/hey' do
-    [200, {}, ['hey!']]
+  get '/ping' do
+    [200, {}, ['PONG']]
   end
   
-  post '/goodbye' do
-    [200, {}, ['goodbye!']]
+  post '/bye' do
+    [200, {}, ['Bye Bye']]
   end
 
 end
