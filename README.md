@@ -34,3 +34,5 @@ docker-compose run --rm ruby bash -c 'bundle exec rubocop'
   Проверять можно запуская `docker-compose run --rm ruby bash -c 'bundle exec rake test'`
 
 3. После того как все тесты проходят, нужно создать pull request в своем репозитори в master и отправить на ревью.
+
+hye
